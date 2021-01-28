@@ -1,38 +1,466 @@
-.App {
-  text-align: center;
-}
+ 
+/* body{margin:0;padding:0;min-height:100vh;min-width:100vw;overflow: hidden;
+  animation: intro 2s 0s normal ease-out forwards;   
+} */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.appClass {
+  z-index: 0;
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  overflow: hidden;
+
+  /* transition : all 1s ease-in-out; */
+  animation: intro 3s 0s normal ease-in-out;  
+}
+
+@keyframes intro
+{
+    from 
+    {   
+      /* transform: scale(0) rotate(0); */
+        opacity:0;
+    }
+    to 
+    {
+        /* transform: scale(1) rotate(360deg); */
+        opacity:1;
+    }
+}
+
+.En_constructionClass
+{
+  position: absolute;
+  top:25vh;
+
+}
+
+.sendEmailOk
+{
+  position : absolute;
+  font-size: 30px;
+  letter-spacing: 5px;
+  top:30vh;
+  color:rgba(0,0,0,.6);
+  opacity:0;
+}
+
+.background
+{
+    position : absolute;
+    top:0;left:0;
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    perspective: 4px;
+    z-index: 0;
+    overflow: hidden;
+    background-color: white;
+    opacity:0.4;
+
+    transition : all 2s ease-in-out;
+
+}
+
+.imgDark {
+  z-index: 999;
+  padding:1vmin;
+  position: absolute;
+  /* margin : 0 auto; */
+  top:center;
+  left:center;
+  background-color: rgba(0,0,0,.3);
+  border-radius: 20%;
+  opacity: 1;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  /* transition : all 1s ease-in-out; */
+  animation: intro 3s 0s normal linear;  
+}
+
+.logoClass {
+  z-index: 999;
+  height: 15vmin; width:15vmin;
+
+  border: 5px solid white;
+  border-radius: 100%;
+  cursor: pointer;
+
+  opacity : 1;
+  transition : all 1s ease-in-out;
+
+  animation: logoRotate infinite 10s linear;
+}
+
+.portfolioItems
+{
+  /* border : 1px solid red; */
+  z-index: -1;
+  position: absolute;
+  top:0;
+  left:0;
+  width:auto;
+  opacity:0;
+  font-family: 'myfont-h1';
+}
+
+.portfolioItem
+{
+  opacity:1;
+  text-align: center;
+  color:white;
+  font-size: 17px;
+  text-shadow: 2px 2px 10px white;
+  letter-spacing: 5px;
+  /* font-family: "myfont-h2"; */
+  
+  padding:1vmin;
+  margin:3vmin;
+  cursor: pointer;
+
+  transition: all 1s ease-in-out;
+
+  /* animation: folioItemRotate infinite 5s linear; */
+}
+
+.portfolioItem:hover
+{
+  transform: translateX(20px);
+  text-shadow: 10px 10px 10px white;
+  color:transparent;
+  opacity:1;
+}
+
+
+.ContactRaccClass
+{
+  z-index: -1;
+  opacity: 0;
+
+  position : absolute;
+  top:70vh;
+  left:center;
+
+  padding:5px;
+  cursor: pointer;
+
+  font-size: 20px;
+  letter-spacing: 4px;
+  
+  font-weight: lighter;
+  text-align: center;
+  color:black;
+  /* text-shadow: 0px 0px 10px white; */
+}
+
+.ContactRaccClass:hover
+{
+  color: white;
+}
+
+
+
+.aboutClass
+{
+    position : absolute;
+    top:30vh;
+    left:center;
+    z-index: -1;
+    padding:5px;
+
+    font-size: 20px;
+    letter-spacing: 7px;
+    font-family:'myfont-h1';
+    
+    font-weight: lighter;
+    text-align: center;
+    opacity:0;
+}
+
+.aboutClass > h1
+{
+  color:white;
+  text-shadow: 1px 0px 1px black, 1px 0px 1px black,1px 1px 1px black, 1px 1px 2px tomato, 1px 0px 2px tomato;
+}
+
+.aboutMyLife
+{
+  flex-wrap: nowrap;
+  position : absolute;
+  bottom:0;
+  color:white;
+  font-size: 25px;
+  letter-spacing: 3px;
+  background-color: rgba(0,0,0,1);
+  font-family:'myfont-h2';
+
+  display: block;
+	overflow: hidden;
+	table-layout: fixed;
+	width: auto;
+}
+
+/* Texte défilant */
+.defile {
+	display:block;
+	-webkit-animation:linear marqueelike 30s infinite ;
+	-moz-animation:linear marqueelike 10s infinite ;
+	-o-animation:linear marqueelike 10s infinite ;
+	-ms-animation:linear marqueelike 10s infinite ;
+	animation:linear marqueelike 30s infinite ;
+	/* margin-left:-150%; */
+	/* padding:0 5px; */
+	text-align:left;
+	height:31px;
+}
+
+
+.defile:after {
+	content:attr(data-text);
+	position:absolute;
+	white-space:nowrap;
+	padding-left:10px;
+}
+
+.portfolioClass
+{
+  z-index: 990;
+  margin:0;
+  padding:40px;
+  /* border:1px solid red; */
+  border-radius: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  text-align: left;
+  opacity : 1;
+
+  /* color:black; */
+  font-size: 3vmin;
+  font-family: "myfont-h3";
+  letter-spacing: 5px;
+  /* display : none; */
+  color:white;
+  text-shadow: 1px 0px 1px black, 0px 1px 1px black, 1px 1px 1px tomato;
+}
+
+.devisClass
+{
+  z-index: 990;
+  margin:0;
+  height:auto;
+  padding:40px;
+  /* border:1px solid red; */
+  border-radius: 100%;
+  margin-top:70px;
+  position: absolute;
+  top:0;
+  left:0;
+  text-align: left;
+  opacity : 1;
+
+  /* color:black; */
+  font-size: 3vmin;
+  font-family: "myfont-h3";
+  letter-spacing: 5px;
+  /* display : none; */
+  color:white;
+  text-shadow: 1px 0px 1px black, 0px 1px 1px black, 1px 1px 1px tomato;
+}
+
+.portefolioContentsClass
+{
+  /* display:flex; */
+  position: absolute;
+  top:center;
+  right:0;
+  background-color: black;
+  opacity: 0;
+  z-index: -1;
+  width: auto;
+  height: 100vh;
+  border-left: 1px solid white;
+
+  color:white;
+  transition : all 2s ease-in-out;
+    /* z-index:990;
+    opacity:1; */
+}
+
+.iframeOldPaperClass
+{
+  width:50vw;
+  height:80vh;
+}
+
+.pongclass, .oldPaperGalleryClass, .arduinoClass, .designClass, .entrepriseClass, .penduClass, .skillsClass, .fractalClass
+{
+  min-height: 100vh;
+  /* border : 1px solid red; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+.formikClass
+{
+  opacity:0;
+  z-index: -1;
+  position : absolute;
+  background-color: transparent;
 }
 
-@keyframes App-logo-spin {
+
+.infoTextLogo
+{
+  position: absolute;
+  top:40vh;
+  left:0;
+  color:rgba(0,0,0,.5);
+  font-size: 17px;
+  font-weight: lighter;
+  font-family: "myfont-h2";
+  /* opacity:0; */
+
+  animation: infoTextLogo 15s infinite ease-in-out;  
+}
+
+
+h1, h2, h3, h4, h5, h6
+{
+  display: inline;
+}
+
+
+
+
+@keyframes folioItemRotate {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes logoRotate {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes infoTextLogo {
+  0%
+  {
+    transform: translateX(-25vw) scale(0);
+    opacity: 1;
+  }
+  50%
+  {
+    transform: translateX(1vw) scale(1);
+    opacity: 1;
+  }
+  80%
+  {
+    transform: translateX(40vw) scale(0);
+    opacity:0
+  }
+  100%
+  {
+    transform: translateX(-50vw) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes aboutClassBurn {
+  0% {
+    color:rgba(255,255,255,1);
+  }
+
+  50% {
+    color:rgba(255,255,255,.7);
+  }
+
+  100% {
+    color:rgba(255,255,255,1);
+  }
+}
+
+
+@font-face{
+  font-family: "myfont-h1";
+  /* src: url("./polices/AtlaneOTF.otf"); */
+  src: url("./polices/HackyDemo.ttf");
+  
+  /* src: url("./polices/Roboto-Thin.ttf"); */
+}
+
+@font-face{
+  font-family: "myfont-h2";
+  src: url("./polices/Roboto-Light.ttf");
+}
+
+
+
+
+
+/**********************/
+/**********************/
+/**********************/
+
+@-webkit-keyframes marqueelike {
+	0%, 100% {margin-left:100%;}
+	99.99% {margin-left:-150%;}
+ }
+@-moz-keyframes marqueelike {
+	0%, 100% {margin-left:100%;}
+	99.99% {margin-left:-150%;}
+ }
+@-o-keyframes marqueelike {
+	0%, 100% {margin-left:100%;}
+	99.99% {margin-left:-150%;}
+ }
+@-ms-keyframes marqueelike {
+	0%, 100% {margin-left:100%;}
+	99.99% {margin-left:-150%;}
+ }
+@keyframes marqueelike {
+	0%, 100% {margin-left:100%;}
+	99.99% {margin-left:-150%;}
+ }
+
+@media only screen and (max-width: 860px) {
+  .defile {
+    -webkit-animation-duration : 10s ;
+	  -moz-animation-duration : 10s;
+	  -o-animation-duration : 10s;
+	  -ms-animation-duration : 10s;
+    animation-duration : 10s;
   }
 }
