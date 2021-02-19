@@ -11,7 +11,9 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  overflow: hidden;
+  width: 100vw;
+  /* overflow: hidden; */
+  /* background-color: black; */
 
   /* transition : all 1s ease-in-out; */
   animation: intro 3s 0s normal ease-in-out;  
@@ -35,24 +37,15 @@
 {
   position: absolute;
   top:25vh;
-
 }
 
-.sendEmailOk
-{
-  position : absolute;
-  font-size: 30px;
-  letter-spacing: 5px;
-  top:30vh;
-  color:rgba(0,0,0,.6);
-  opacity:0;
-}
+
 
 .background
 {
     position : absolute;
     top:0;left:0;
-    min-height: 100vh;
+    height: 100vh;
     width: 100vw;
     overflow: hidden;
     
@@ -73,12 +66,12 @@
 
 .imgDark {
   z-index: 999;
-  padding:1vmin;
+  padding:8px;
   position: absolute;
   /* margin : 0 auto; */
   top:center;
   left:center;
-  background-color: rgba(0,0,0,.3);
+  background-color: rgba(0,0,0,.2);
   border-radius: 20%;
   opacity: 1;
 
@@ -92,7 +85,8 @@
 
 .logoClass {
   z-index: 999;
-  height: 15vmin; width:15vmin;
+  /* height: 15vmin; width:15vmin; */
+  height : 100px; width : 100px;
 
   border: 5px solid white;
   border-radius: 100%;
@@ -104,56 +98,23 @@
   animation: logoRotate infinite 10s linear;
 }
 
-.portfolioItems
+.contactPageClass
 {
-  /* border : 1px solid red; */
-  z-index: -1;
-  position: absolute;
-  top:0;
-  left:0;
-  width:auto;
-  opacity:0;
-  font-family: 'myfont-h1';
-}
 
-.portfolioItem
-{
-  opacity:1;
-  text-align: center;
-  color:white;
-  font-size: 17px;
-  text-shadow: 2px 2px 10px white;
-  letter-spacing: 5px;
-  /* font-family: "myfont-h2"; */
-  
-  padding:1vmin;
-  margin:3vmin;
-  cursor: pointer;
-
-  transition: all 1s ease-in-out;
-
-  /* animation: folioItemRotate infinite 5s linear; */
-}
-
-.portfolioItem:hover
-{
-  transform: translateX(20px);
-  text-shadow: 10px 10px 10px white;
-  color:transparent;
-  opacity:1;
 }
 
 
 .ContactRaccClass
 {
-  z-index: -1;
-  opacity: 0;
+  z-index: 990;
+  opacity: 1;
+  /* border: 1px solid red; */
 
   position : absolute;
   top:70vh;
   left:center;
 
-  padding:5px;
+  margin:20px;
   cursor: pointer;
 
   font-size: 20px;
@@ -162,7 +123,7 @@
   font-weight: lighter;
   text-align: center;
   color:black;
-  /* text-shadow: 0px 0px 10px white; */
+  transition: all 2s ease-in-out;
 }
 
 .ContactRaccClass:hover
@@ -174,11 +135,12 @@
 
 .aboutClass
 {
+    /* border: 1px solid red; */
     position : absolute;
     top:30vh;
     left:center;
-    z-index: -1;
-    padding:5px;
+    z-index: 990;
+    margin:20px;
 
     font-size: 20px;
     letter-spacing: 7px;
@@ -186,7 +148,22 @@
     
     font-weight: lighter;
     text-align: center;
-    opacity:0;
+    opacity:1;
+}
+
+@media screen and (max-width: 700px)
+{
+  .aboutClass
+  {
+    font-size: 4vmin;
+    letter-spacing: 4px;
+  }
+
+  .ContactRaccClass
+  {
+    font-size: 4vmin;
+    letter-spacing: 0px;
+  }
 }
 
 .aboutClass > h1
@@ -238,7 +215,7 @@
 {
   z-index: 990;
   margin:0;
-  padding:40px;
+  padding:30px;
   /* border:1px solid red; */
   border-radius: 100%;
   position: absolute;
@@ -248,7 +225,7 @@
   opacity : 1;
 
   /* color:black; */
-  font-size: 3vmin;
+  font-size: 22px;
   font-family: "myfont-h3";
   letter-spacing: 5px;
   /* display : none; */
@@ -261,7 +238,7 @@
   z-index: 990;
   margin:0;
   height:auto;
-  padding:40px;
+  padding:30px;
   /* border:1px solid red; */
   border-radius: 100%;
   margin-top:70px;
@@ -272,7 +249,7 @@
   opacity : 1;
 
   /* color:black; */
-  font-size: 3vmin;
+  font-size: 22px;
   font-family: "myfont-h3";
   letter-spacing: 5px;
   /* display : none; */
@@ -280,50 +257,158 @@
   text-shadow: 1px 0px 1px black, 0px 1px 1px black, 1px 1px 1px tomato;
 }
 
+.portefolioPage
+{
+  z-index: 990;
+  height: 100vh;
+  width: 100vw;
+  /* border : 2px solid blue; */
+  display: flex;
+  flex-direction: row;
+}
+
+
+
 .portefolioContentsClass
 {
   /* display:flex; */
-  position: absolute;
-  top:center;
-  right:0;
+  /* border : 2px solid green; */
   background-color: black;
-  opacity: 0;
-  z-index: -1;
-  width: auto;
-  height: 100vh;
-  border-left: 1px solid white;
+  opacity: 1;
+  z-index: 990;
+
+  width:auto;
+  flex:1;
+
+
 
   color:white;
   transition : all 2s ease-in-out;
-    /* z-index:990;
-    opacity:1; */
 }
 
-.iframeOldPaperClass
+.portfolioItems
 {
-  width:50vw;
-  height:80vh;
+  display:flex;
+  
+  /* justify-content: center; */
+  flex-direction: column;
+  border-right : 1px solid rgba(255,255,255,0.2);
+  z-index: 990;
+
+  width:auto;
+  opacity:1;
+  font-family: 'myfont-h1';
 }
+
+.portfolioItem
+{
+  opacity:1;
+  text-align: center;
+  color:white;
+  font-size: 17px;
+  text-shadow: 2px 2px 10px white;
+  letter-spacing: 5px;
+  /* font-family: "myfont-h2"; */
+  
+  padding:2.5vmin;
+  cursor: pointer;
+
+  transition: all 1s ease-in-out;
+
+  /* animation: folioItemRotate infinite 5s linear; */
+}
+
+.portfolioItem:hover
+{
+  transform: translateX(20px);
+  text-shadow: 10px 10px 10px white;
+  color:transparent;
+  opacity:1;
+}
+
+.iframePongClass, .iframeOldPaperGalleryClass
+{
+  width:80%;
+  height:50vh;
+}
+
+@media screen and (max-width: 700px)
+{
+  .portefolioPage
+  {
+    flex-direction: column;
+  }
+
+  .portfolioItems
+  {
+    border-bottom : 1px solid rgba(255,255,255,0.2);
+    justify-content: center; 
+    flex-direction: row; 
+    flex-wrap: wrap;
+  }
+  
+  .portfolioItem
+  {
+    letter-spacing: 2px;
+    padding:4vmin;
+  }
+
+  .iframePongClass, .iframeOldPaperGalleryClass
+  {
+    width:90%;
+    height:50vh;
+  }
+}
+
+
+
 
 .pongclass, .oldPaperGalleryClass, .arduinoClass, .designClass, .entrepriseClass, .penduClass, .skillsClass, .fractalClass
 {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   /* border : 1px solid red; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* width:100%; */
 
 }
 
 .formikClass
 {
   opacity:0;
-  z-index: -1;
+  z-index: 990;
   position : absolute;
   background-color: transparent;
+  
+  /* transform : opacity(1); */
+  /* transition : all 5s 1s ease-in-out; */
 }
 
+.sendEmailOk
+{
+  
+  position : absolute;
+  top:20vh;
+  left:0;
+
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 5px;
+  color:rgba(0,0,0,.6);
+  padding:20px;
+  opacity:0;
+  /* z-index:-1; */
+}
+
+@media screen and (max-width: 700px)
+{
+  .sendEmailOk
+  {
+    font-size: 20px;
+  }
+}
 
 .infoTextLogo
 {
