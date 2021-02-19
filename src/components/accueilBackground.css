@@ -1,0 +1,47 @@
+.el-Style
+{
+    height: 10vw; width:10vw; 
+    border-radius: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: turn 60s 0s ease-in-out infinite;  
+    opacity:.1;
+    transition:all 1s ease-in-out;
+    z-index: 990;
+}
+
+#el-1
+{
+    background-image: url("../ressources/logo.jpg");  
+}
+#el-2
+{
+    background-image: url("../ressources/batterie.jpg");  
+}
+#el-3
+{
+    background-image: url("../ressources/arduino.jpg");  
+}
+#el-4
+{ 
+    background-image: url("../ressources/react.png");  
+}
+
+@keyframes turn 
+{
+    0% 
+    {
+        transform: rotate3d(1,0,0,20deg);
+    }
+
+    50% 
+    {
+        transform: rotate3d(0,1,0,100deg);
+    }
+
+    100% 
+    {
+        transform: rotate3d(1,0,0,20deg);
+    }
+}

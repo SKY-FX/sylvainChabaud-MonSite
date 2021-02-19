@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .contactFormClass {
+    position: relative;
+    top:center;
+    left:0;
+    /* border:1px solid blue; */
+    z-index: 990;
+    color: #333;
+    font-family: sans-serif;
+    text-align: center;
+    width:auto;
+  }
+
+  .contactFormClass > h3 {
+    font-family: "myfont-h2";
+    font-size: 20x;
+  }
+  
+  .contactFormClass > form {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 70%;
+  }
+  
+  .contactFormClass > form div {
+    margin: 24px 0;
+    
+  }
+  
+  .contactFormClass > form input, .contactFormClass > form textarea {
+    border: 1px solid #333;
+    border-radius: 4px;
+    height: 28px;
+    width: 100%;
+    padding : 20px;
+    box-shadow: 10px 5px 5px grey;
+  }
+
+  .contactFormClass > form textarea {
+      height:20vh;
+  }
+  
+  .contactFormClass > form p {
+    color: #d41a1a;
+    font-size: 12px;
+    margin: 4px 0 8px 0;
+  }
+
+  .contactFormClass > h1 {
+      margin:20px;
+  }
+  
+  .contactFormClass > form button {
+    background:rgba(255,255,255,1);
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 18px;
+    padding: 20px;
+    transform: all 1s linear;
+    box-shadow: 10px 5px 5px grey;
+    transition: all 1s ease-in-out;
+  }
+
+  .contactFormClass > form button:hover {
+    border: 1px solid white;
+    background:rgba(100,100,100,.1);
+    cursor: pointer;
+    
+  }
+  
+  .contactFormClass > .emailLabelClass {
+      /* padding:10px; */
+      font-size: 25px;
+      letter-spacing: 3px;
+      color:black;
+      /* text-shadow: 0px 0px 1px tomato; */
+  }
+
+@media screen and (max-width: 700px)
+{
+  .contactFormClass
+  {
+    width:100vw;
+    /* margin:20px; */
+  }
+  .contactFormClass > .emailLabelClass
+  {
+    font-size: 22px;
+    letter-spacing: 0px;
+  }
+
+  .contactFormClass > form 
+  {
+    width:80%;
+  }
+}
+
