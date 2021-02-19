@@ -1,0 +1,156 @@
+*{margin:0;padding:0;}
+
+body
+{
+    display:flex;
+    flex-direction: column;
+    background-color: bisque;
+    min-height: 100vh;
+}
+
+/* ####################### */
+/* ####################### */
+
+#header
+{
+    background-image: url('./images/fractal.jpg');
+    background-position: center;
+    background-size: cover;
+    opacity:.5;
+    border: 3px solid black;
+    height:auto;
+    padding: 20px;
+    /* margin: 0 auto; */
+    
+}
+
+#main
+{  
+    flex: 1;
+    font-weight: bolder;
+    font-size: 25px;
+    color: green;
+    /* margin: 0 auto; */
+    /* border: 1px solid green; */
+
+    color: whitesmoke;
+    -webkit-text-stroke: 1px black;
+    padding:10px;
+    /* text-shadow: 1px 1px 10px green; */
+}
+
+#footer
+{
+    /* border: 1px solid green; */
+    /* margin: 0 auto; */
+    height:auto;
+    padding: 20px;
+}
+
+/* ####################### */
+/* ####################### */
+
+#barre
+{
+    border: 2px solid black;
+    /* background-image:url('./images/batterie.jpg'); */
+    background-color: blanchedalmond;
+    background-position: center;
+    background-size: cover;
+    opacity : .8;
+    position: absolute;
+    bottom: 0;
+    width: 10vw;
+    /* height: 42px; */
+
+    font-size: 25px;
+
+    text-align: center;
+    color:black;
+    /* text-shadow: 1px 1px 10px black, 3px 3px 10px black, 6px 6px 10px black; */
+    
+}
+
+#bille
+{
+    border: 1px solid black;
+    --bille-size-X : 50px;
+    --bille-size-Y : 50px;
+    position : absolute;
+    border-radius: 50%;
+    background-image:url('./images/fractal.jpg');
+    background-position: center;
+    background-size: cover;
+    width: var(--bille-size-X);
+    height: var(--bille-size-Y);
+    left: 1vw;
+    top: 1vh;
+}
+
+#level, #start
+{
+    font-size: 20px;
+    right:10px;
+    top:140px;
+    padding:5px;
+    position : absolute;
+    text-align: center;    
+}
+
+#level
+{
+    text-shadow: 1px 1px 10px black, 3px 3px 10px black, 6px 6px 10px black;
+}
+
+#level a
+{
+    color:green;
+    
+}
+
+#start
+{
+    border:1px solid black;
+    top:90px;
+    font-size: 25px;
+
+    color: whitesmoke;
+    -webkit-text-stroke: 1px black;
+}
+
+#start:hover
+{
+    color: green;
+}
+
+h1
+{
+    color: whitesmoke;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 1px 1px 10px black, 3px 3px 10px black, 6px 6px 10px black;
+}
+
+a{text-decoration: none;}
+
+a:hover{
+    cursor:  pointer;  
+}
+
+#header h1
+{
+    text-align: center;
+    color: green;
+}
+
+#header p
+{
+    transform: rotate(10deg);
+    text-align: right;
+    font-size: 30px;
+    color: green;
+}
+#footer h1
+{
+    text-align: center;
+    color: rgba(255,255,255,.8);
+}
