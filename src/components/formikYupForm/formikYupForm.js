@@ -88,7 +88,8 @@ export default function FormikYupForm() {
     <div className="contactFormClass">
       
       <div className="emailLabelClass">
-        Dites-moi en plus sur votre projet !<br/><br/>
+        <h3>Dites-moi en plus sur votre projet !</h3>
+        <br/><br/>
       </div>
 
       <form onSubmit={formik.handleSubmit}>

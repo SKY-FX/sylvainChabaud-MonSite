@@ -1,7 +1,6 @@
 import React, { Fragment, Component } from 'react'
 import { CSSTransition } from "react-transition-group"
-
-import "../contact/modal.css"
+import { Helmet } from "react-helmet"
 
 export default class aboutMe extends Component {
 
@@ -52,20 +51,10 @@ export default class aboutMe extends Component {
     goToDevis = () => {
         
         let background = document.querySelector(".background");
-        let imgDark = document.querySelector(".imgDark");
-
         background.style.transition = "all 1s ease-in-out";
-        imgDark.style.transition = "all 1s 0.5s ease-in-out";
+        background.style.backgroundColor = "white";
+        background.style.opacity = "1";
 
-        background.style.backgroundColor = "black";
-        background.style.opacity = ".2";
-
-        imgDark.style.opacity = "1";
-        imgDark.style.backgroundColor = "rgba(0,0,0,.5)";
-        // console.log('WINDOW', window.innerWidth);
-        if (window.innerWidth>800) imgDark.style.transform = "translateX(40vw) translateY(0) scale(0.5) rotate(135deg)";
-        else imgDark.style.transform = "translateX(0) translateY(-40vh) scale(0.5) rotate(135deg)";
-        
         this.props.onAboutClick('CONTACT');
         this.setState({
             onContactClickBool : true
@@ -78,16 +67,17 @@ export default class aboutMe extends Component {
 
     render() {
         
-
         var doIt = this.props.onAbout;
-        // if (this.state.onMount && doIt!==this.state.propsValue) doIt = this.state.onMount;
-        console.log("ABOUT ME 1 :", doIt);
-        console.log("ABOUT ME 2 :", this.state.propsValue);
-        console.log("ABOUT ME 3 :", this.state.onMount);
-
         return (
             <Fragment>
-                <CSSTransition classNames='aboutMe' mountOnEnter unmountOnExit appear in={doIt} timeout={{ enter: 0, exit: 2000 }} >
+
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Développeur Informatique - Sylvain Chabaud</title>
+                    <link rel="canonical" href="https://sylvain-chabaud/aboutMe.fr" />
+                </Helmet>
+
+                <CSSTransition classNames='aboutMe' mountOnEnter unmountOnExit appear in={doIt} timeout={{ enter: 0, exit: 1500 }} >
                     <div className = "aboutClass" onMouseMove={ this.onAboutMoove } onMouseLeave={ this.onAboutLeave }>
                         <h2>Sylvain Chabaud</h2><br/><br/><br/>
                         <h1><b>DEVELOPPEUR INFORMATIQUE</b></h1>
@@ -101,9 +91,11 @@ export default class aboutMe extends Component {
                 
                 <CSSTransition classNames='Contact_Racc' mountOnEnter unmountOnExit appear in={doIt} timeout={{ enter: 0, exit: 2000 }} onExited={ this.afterEffectFunction } >
                     <div className="ContactRaccClass" onClick={ this.goToDevis }>
-                        Si vous souhaitez un devis pour votre futur site internet,
-                        ou pour un besoin en entreprise,<br/>
-                        n'hésitez pas à me laisser un <b>message</b> !
+                        <h2>    
+                            Si vous souhaitez un devis pour votre futur site internet,
+                            ou pour un besoin en entreprise,<br/>
+                            n'hésitez pas à me laisser un <b>message</b> !
+                        </h2>
                     </div>
                 </CSSTransition>
 

@@ -1,2 +1,228 @@
+.iframePDFClass
+{
+    width : 60vw;
+    height: 80vh;
+}
 
+.arduinoTextClass, .fractalTextClass, .oldPaperTextClass, .PongTextClass, .entrepriseTextClass, .PenduTextClass, .DesignTextClass
+{
+    /* border:1px solid red; */
+    padding: 0 40px 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arduinoTextClass > h3, .fractalTextClass>h3, .fractalTextClass>h4, .oldPaperTextClass>h3, .PongTextClass>h3, .entrepriseTextClass>h2, .entrepriseTextClass>h3, .PenduTextClass>h3, .DesignTextClass>h3
+{
+    /* border:1px solid red; */
+    width:50vw;
+    text-align: justify;
+    font-family: "myfont-h1";
+    letter-spacing: 4px;
+    font-weight: lighter;
+    font-size: 25px;
+    opacity: 0.8;
+
+    margin: 80px 0 80px 0;
+}
+
+.entrepriseTextClass ul
+{
+    font-size: 18px;
+    color:rgba(200,200,200,1);
+}
+
+.entrepriseTextClass span
+{
+    font-size: 50px;
+    color:grey;
+    opacity : 0.8;
+}
+
+.fractalTextClass>h4
+{
+    margin: 80px 0 20px 0;
+    text-align: center;
+    opacity:1;
+    
+}
+
+.oldPaperTextClass>h4
+{
+    margin: 0 0 80px 0;
+    width:50vw;
+    text-align: left;
+    font-family:'myfont-h1';
+    letter-spacing: 2px;
+    font-weight: lighter;
+    font-size: 20px;
+    opacity: 0.8;
+
+}
+
+.fractalTextClass a
+{
+    /* border:1px solid red; */
+    text-decoration: none;
+    color :white;
+    opacity:0.8;
+    text-align: center;
+    transition:all .5s ease-in-out;
+}
+
+.PongTextClass a, .penduClass a
+{
+    text-decoration: none;
+    color :white;
+    font-weight: bolder;
+    opacity:1;
+    transition:all .5s ease-in-out;
+}
+
+.fractalTextClass a:hover, .PongTextClass a:hover, .penduClass a:hover
+{
+    color: tomato;   
+}
+
+.arduinoClass, .fractalClass, .oldPaperGalleryClass, .designClass, .pongclass, .entrepriseClass, .penduClass
+{
+    padding-top:40px;
+    margin-bottom:40px;
+}
+
+.arduinoClass > h2, .arduinoClass > h3, .fractalClass>h2, .fractalClass>h3, .oldPaperGalleryClass>h2, .oldPaperGalleryClass>h3, .designClass>h2, .designClass>h3, .pongclass>h2, .entrepriseClass>h2, .entrepriseClass>h3, .penduClass>h2
+{
+    /* border:1px solid red; */
+    font-family: "myfont-h2";
+    letter-spacing: 4px;
+    font-weight: lighter;
+    text-align: center;
+    margin:20px;
+}
+
+.oldPaperGalleryClass a {
+    text-decoration: none;
+    color:grey;
+    transition:all .5s ease-in-out
+}
+
+.oldPaperGalleryClass a:hover{
+    color:tomato;
+    opacity:0.8;
+}
+
+.fractalImgClass
+{
+    margin-top:50px;
+    width: 80%;
+}
+
+.logosExpClass
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.logoExperienceClass
+{
+    /* height:50px; */
+    width: 180px;
+}
+
+.fractalLogosClass
+{
+    height: 200px;
+    margin-right:5px;
+}
+
+.fractalLogos
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.logisticTabClass
+{
+    /* border:1px solid red; */
+    width: 50vw;
+    opacity:1;
+}
+
+.LorrentzClass
+{
+    /* margin-top:50px; */
+    width: 400px;
+}
+
+.coursLinkClass
+{
+    text-align: center;
+}
+
+.buttonScrollClass
+{
+    padding: 15px;
+    margin:10px;
+    border-radius: 5px;
+
+    background-color: black;
+    border-color: white;
+    color:white;
+
+    transition:all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.buttonScrollClass:hover
+{
+    background-color: bisque;
+    border-color: white;
+    color: black;
+}
+
+@media screen and (max-width: 800px)
+{
+    .arduinoTextClass > h3, .fractalTextClass > h3, .oldPaperTextClass>h3, .PongTextClass>h3, .PenduTextClass>h3, .entrepriseTextClass>h3, .DesignTextClass>h3
+    {
+        /* padding:20px; */
+        width:80vw;
+        text-align: justify;
+    }
+
+    .oldPaperTextClass>h4
+    {
+        width:80vw;
+    }
+
+    .fractalTextClass > h4
+    {
+        width:80vw;
+        text-align: center;
+    }
+
+    .logisticTabClass
+    {
+        width:80vw;
+    }
+
+    .iframePDFClass
+    {
+        width : 80vw;
+        height: 60vh;
+    }
+
+    .fractalLogos
+    {
+        flex-direction: column;
+    }
+
+    .fractalLogosClass
+    {
+        width: 200px;
+    }
+}
 

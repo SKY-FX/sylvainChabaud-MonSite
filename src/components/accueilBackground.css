@@ -7,8 +7,9 @@
     background-repeat: no-repeat;
     animation: turn 60s 0s ease-in-out infinite;  
     opacity:.1;
-    transition:all 1s ease-in-out;
-    z-index: 990;
+    /* transition:all 1s ease-in-out; */
+    z-index: 0;
+    overflow: hidden;
 }
 
 #el-1

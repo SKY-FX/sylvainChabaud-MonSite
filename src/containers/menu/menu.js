@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { CSSTransition } from "react-transition-group"
-
-import "../contact/modal.css"
+import { Helmet } from "react-helmet"
 
 export default class menu extends Component {
 
@@ -41,16 +40,17 @@ export default class menu extends Component {
     }
 
     onDevisClick = () => {
-        let imgDark = document.querySelector(".imgDark");
+        // console.log("COUCOU")
+        // let imgDark = document.querySelector(".imgDark");
         let background = document.querySelector('.background');
         
         background.style.backgroundColor = "white";
     
-        imgDark.style.opacity = "1";
-        imgDark.style.backgroundColor = "rgba(0,0,0,.5)";
-        if (window.innerWidth>800) imgDark.style.transform = "translateX(40vw) translateY(0) scale(0.5) rotate(135deg)";
-        else imgDark.style.transform = "translateX(0) translateY(-40vh) scale(0.5) rotate(135deg)";
-        imgDark.style.transition = "all 1s ease-in-out";
+        // let imgDark = document.querySelector(".imgDark");
+        // imgDark.style.transform = "translateX(0) translateY(0) scale(0.5) rotate(135deg)";
+        // imgDark.style.opacity = "1";
+        // imgDark.style.backgroundColor = "rgba(0,0,0,.5)";
+        // imgDark.style.transition = "all 1s ease-in-out";
     
         this.props.onMenuClick('CONTACT');
 
@@ -93,7 +93,7 @@ export default class menu extends Component {
         background.style.backgroundColor = "black";
         background.style.opacity = "1";
 
-        background.style.transition = "all 1s 1.25s ease-in-out";
+        // background.style.transition = "all 1s 1.25s ease-in-out";
         imgDark.style.transition = "all 1s ease-in-out";
 
         this.props.onMenuClick('PORTEFOLIO');
@@ -117,15 +117,26 @@ export default class menu extends Component {
         return (
             <Fragment>
 
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Développeur Web - Sylvain Chabaud</title>
+                    <link rel="canonical" href="https://sylvain-chabaud.fr" />
+                </Helmet>
+
+                <div className="TransparentDivClass">
+                    <h1>Portefolio et contact</h1>
+                    <h3>Sylvain Chabaud</h3>
+                </div>
+
                 <CSSTransition classNames='portefolio' mountOnEnter unmountOnExit appear in={effectLauncher} timeout={{ enter: 0, exit: 2000}} >
                     <div className="portfolioClass" onMouseMove={ this.onPortFolioMoove } onMouseLeave={ this.onPortFolioLeave } onClick={ this.onPortFolioClick } >
-                        <h4>VISITEZ MON PORTEFOLIO</h4>
+                        <h2>VISITEZ MON PORTEFOLIO</h2>
                     </div>                    
                 </CSSTransition>
 
                 <CSSTransition classNames='devis' mountOnEnter unmountOnExit appear in={effectLauncher} timeout={{ enter: 0, exit: 1000}} onExited={ this.afterEffectFunction }>
                     <div className="devisClass" onMouseMove={ this.onDevisMoove } onMouseLeave={ this.onDevisLeave } onClick={ this.onDevisClick } >
-                        <h4>CONTACTEZ-MOI</h4>
+                        <h2>CONTACTEZ-MOI</h2>
                     </div>                    
                 </CSSTransition>
                 

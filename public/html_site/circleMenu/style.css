@@ -4,8 +4,6 @@ body,html
 	padding:0;
 	height:100%;
 	width:100%;
-	
-	background:black;
 }
 
 #MainTree
@@ -16,6 +14,7 @@ body,html
 	
 	width:100%; height:100%;
 	/* border : 2px dashed red; */
+  /* background-color:red;  */
 }
 
 .tree{ 
@@ -23,6 +22,7 @@ body,html
 	
 	/* border : 1px dashed green; */
 	background:transparent;
+  /* background-color:red; */
   /* overflow:hidden; */
   
     opacity:0.5;
@@ -251,7 +251,7 @@ span span:after{
 
 a:hover div:not(.ref){
   opacity : 0.5;
-  transition : opacity 1s;
+  transition : opacity 1s ease-in-out;
 }
 
 a:hover div p {

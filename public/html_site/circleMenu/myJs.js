@@ -135,11 +135,11 @@ class Tree
 let ID_input = "MainTree"
 let NB_leaf = 8;
 let NAMES_leaf = ['entreprise','React','Fractal','Arduino','Musique','Code', 'Formation', 'LabView'];
-let HEIGHT_leaf = 20; // en %
-let WIDTH_leaf = 20; // en %
+let HEIGHT_leaf = 25; // en %
+let WIDTH_leaf = 25; // en %
 let X_tree1 = 50;  // en %
 let Y_tree1 = 50;  // en %
-let SIZE_tree1 = .5; // Zoom entre 0 et 1
+let SIZE_tree1 = .75; // Zoom entre 0 et 1
 
 let myTree = new Tree (ID_input, NB_leaf, NAMES_leaf, WIDTH_leaf, HEIGHT_leaf, X_tree1, Y_tree1, SIZE_tree1);
 myTree.buildTree();
