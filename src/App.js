@@ -540,8 +540,6 @@ class App extends Component {
             )} 
           />
 
-          
-
         </Switch>
       </Router> 
 
@@ -555,19 +553,10 @@ class App extends Component {
         <h5>Clique sur le logo pour continuer</h5>
       </div> */}
 
-      {/* <div className = "aboutMyLife">
-        <div className="defile">
-          <h1>ReactJS, Javascript, HTML, CSS, PHP, SQL, SERVEUR, BASE DE DONNEE, INFORMATIQUE, TRAITEMENT DE SIGNAL, LANGAGE C, GITHUB, MATLAB, LABVIEW, EAGLE ELECTRONIQUE</h1>
-        </div>
-      </div> */}
-
       <div id="cadre_defil_11"> 
         <div id="conteneur_defil_11">
           <div id="objet_defilant_11">
-            
             <h3>ReactJS, Javascript, HTML, CSS, PHP, SQL, SERVEUR, BASE DE DONNEE, INFORMATIQUE, TRAITEMENT DE SIGNAL, LANGAGE C, GITHUB, MATLAB, LABVIEW, EAGLE ELECTRONIQUE, ReactJS, Javascript, HTML, CSS, PHP, SQL, SERVEUR, BASE DE DONNEE, INFORMATIQUE, TRAITEMENT DE SIGNAL, LANGAGE C, GITHUB, MATLAB, LABVIEW, EAGLE ELECTRONIQUE, </h3>
-            {/* <div style={{paddingRight: '0', display: 'inline'}}> </div> */}
-          
           </div>
         </div>
       </div>

@@ -76,16 +76,21 @@ export default class portefolio extends Component {
                     <link rel="canonical" href="https://sylvain-chabaud/portefolio.fr" />
                 </Helmet>
 
+                <div className="TransparentDivClass">
+                    <h1>Portefolio - Expérience professionelle - Projets informatique</h1>
+                    <h2>Sylvain Chabaud</h2>
+                </div>
+
                 <CSSTransition classNames='portefolioContainer' appear in={effectLauncher} timeout={{ enter: 0, exit: 1500}} onExited={ this.afterEffectFunction }>
                     <div className="portfolioItems">
-                        <div className="portfolioItem" id = "oldPaper" onClick={ this.itemPortefolioClick }>OLD PAPER GALLERY</div>
-                        <div className="portfolioItem" id = "pendu" onClick={ this.itemPortefolioClick }>LE PENDU</div>
-                        <div className="portfolioItem" id = "pong" onClick={ this.itemPortefolioClick }>LE PONG</div>
-                        <div className="portfolioItem" id = "skills" onClick={ this.itemPortefolioClick }>MES COMPETENCES</div>
+                        <div className="portfolioItem" id = "entreprise" onClick={ this.itemPortefolioClick }>EXPERIENCE ENTREPRISE</div>
+                        {/* <div className="portfolioItem" id = "skills" onClick={ this.itemPortefolioClick }>MES COMPETENCES</div> */}
                         <div className="portfolioItem" id = "design" onClick={ this.itemPortefolioClick }>EXEMPLE DE DESIGN</div>
                         <div className="portfolioItem" id = "arduino" onClick={ this.itemPortefolioClick }>PROJET ARDUINO</div>
                         <div className="portfolioItem" id = "fractal" onClick={ this.itemPortefolioClick }>FRACTAL</div>
-                        <div className="portfolioItem" id = "entreprise" onClick={ this.itemPortefolioClick }>EXPERIENCE ENTREPRISE</div>
+                        <div className="portfolioItem" id = "pendu" onClick={ this.itemPortefolioClick }>LE PENDU</div>
+                        <div className="portfolioItem" id = "pong" onClick={ this.itemPortefolioClick }>LE PONG</div>
+                        <div className="portfolioItem" id = "oldPaper" onClick={ this.itemPortefolioClick }>OLD PAPER GALLERY</div> 
                     </div>
                 </CSSTransition>
 
@@ -96,12 +101,12 @@ export default class portefolio extends Component {
                                 case 'oldPaper' : return ( <OldPaperGallery /> )                
                                 case 'pong' : return ( <Pong /> )
                                 case 'pendu' : return ( <Pendu /> )
-                                case 'skills' : return ( <Skills /> )
+                                // case 'skills' : return ( <Skills /> )
                                 case 'design' : return ( <Design /> )
                                 case 'arduino' : return ( <Arduino /> )
                                 case 'fractal' : return ( <Fractal /> )
                                 case 'entreprise' : return ( <Entreprise /> )
-                                default : return ( <div>Sélectionnez une rebrique dans le menu !</div> )
+                                // default : return ( <div>Sélectionnez une rebrique dans le menu !</div> )
                             }
                         })()}
 

@@ -130,7 +130,7 @@ export default class menu extends Component {
 
                 <CSSTransition classNames='portefolio' mountOnEnter unmountOnExit appear in={effectLauncher} timeout={{ enter: 0, exit: 2000}} >
                     <div className="portfolioClass" onMouseMove={ this.onPortFolioMoove } onMouseLeave={ this.onPortFolioLeave } onClick={ this.onPortFolioClick } >
-                        <h2>VISITEZ MON PORTEFOLIO</h2>
+                        <h2>MON PORTEFOLIO</h2>
                     </div>                    
                 </CSSTransition>
 

@@ -307,7 +307,7 @@
 .portfolioClass > h2, .devisClass > h2
 {
   text-align: left;
-  font-size: 4vw;
+  font-size: 9vmin;
   font-family: "myfont-h1";
   font-weight: lighter;
   letter-spacing: 5px;
@@ -331,7 +331,7 @@
   padding:30px;
   /* border:1px solid red; */
   border-radius: 100%;
-  margin-top:5vw;
+  margin-top:10vh;
   position: absolute;
   top:0;
   left:0;
@@ -404,7 +404,7 @@
 {
   transform: translateX(20px);
   text-shadow: 10px 10px 10px white;
-  color:transparent;
+  color:tomato;
   opacity:1;
 }
 

@@ -36,7 +36,7 @@
 .entrepriseTextClass span
 {
     font-size: 50px;
-    color:grey;
+    color:coral;
     opacity : 0.8;
 }
 
@@ -71,7 +71,7 @@
     transition:all .5s ease-in-out;
 }
 
-.PongTextClass a, .penduClass a
+.PongTextClass a, .penduClass a, .DesignTextClass a
 {
     text-decoration: none;
     color :white;
@@ -80,7 +80,7 @@
     transition:all .5s ease-in-out;
 }
 
-.fractalTextClass a:hover, .PongTextClass a:hover, .penduClass a:hover
+.fractalTextClass a:hover, .PongTextClass a:hover, .penduClass a:hover, .DesignTextClass a:hover
 {
     color: tomato;   
 }
@@ -128,7 +128,7 @@
 
 .logoExperienceClass
 {
-    /* height:50px; */
+    height:180px;
     width: 180px;
 }
 
