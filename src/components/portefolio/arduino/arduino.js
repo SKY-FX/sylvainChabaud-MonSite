@@ -22,7 +22,7 @@ export default class arduino extends Component {
     render() {
         const largeurVideo = "400px";
         return (
-            <div className="arduinoClass" id="scrollInto">
+            <div className="arduinoClass" id="scrollInto"> 
                 <h2>RECHERCHE ET DEVELOPPEMENT</h2>
                 <h3>Expression musicale</h3>
                 

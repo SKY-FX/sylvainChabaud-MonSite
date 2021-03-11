@@ -9,6 +9,7 @@ export default class contact extends Component {
 
     render() {
 
+        
         var doItForm = this.props.onContact;
         // console.log("CONTACT", doItForm);
 
